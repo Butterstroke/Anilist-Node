@@ -526,6 +526,10 @@ export declare interface PersonRelation {
     name: string
 }
 
+export declare interface PersonRoleRelation extends PersonRelation {
+	role: string
+}
+
 export declare interface UserRelation {
     id: number,
     name: string
@@ -741,7 +745,7 @@ declare interface MediaEntry {
     tags: Tags[],
     relations: MediaRelation[],
     characters: PersonRelation[],
-    staff: PersonRelation[],
+    staff: PersonRoleRelation[],
     studios: StudioRelation[],
     isFavourite: boolean,
     isAdult: boolean,
